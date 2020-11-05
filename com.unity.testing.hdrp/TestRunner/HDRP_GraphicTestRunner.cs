@@ -14,7 +14,11 @@ public class HDRP_GraphicTestRunner
 {
     [PrebuildSetup("SetupGraphicsTestCases")]
     [UseGraphicsTestCases]
-    [Timeout(300 * 1000)] // Set timeout to 5 minutes to handle complex scenes with many shaders (default timeout is 3 minutes)
+#if ENABLE_VR
+    [Timeout(1000)] // Set timeout to 5 minutes to handle complex scenes with many shaders (default timeout is 3 minutes)
+#else
+    [Timeout(3000)] // Set timeout to 5 minutes to handle complex scenes with many shaders (default timeout is 3 minutes)
+#endif
     public IEnumerator Run(GraphicsTestCase testCase)
     {
         SceneManager.LoadScene(testCase.ScenePath);
