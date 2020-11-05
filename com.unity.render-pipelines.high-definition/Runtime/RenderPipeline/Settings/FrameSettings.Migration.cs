@@ -439,7 +439,7 @@ namespace UnityEngine.Rendering.HighDefinition
 
         internal static void MigrateEmissiveAsForward(ref FrameSettings cameraFrameSettings)
         {
-            cameraFrameSettings.SetEnabled(FrameSettingsField.EmissiveAsForward, false);
+            cameraFrameSettings.SetEnabled(FrameSettingsField.LitEmissiveAsForward, false);
         }  
     }
 }

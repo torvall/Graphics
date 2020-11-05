@@ -588,7 +588,7 @@ namespace UnityEngine.Rendering.HighDefinition
                                     DBufferOutput dbuffer,
                                     CullingResults cullResults)
         {
-            if (!hdCamera.frameSettings.IsEnabled(FrameSettingsField.EmissiveAsForward))
+            if (!hdCamera.frameSettings.IsEnabled(FrameSettingsField.LitEmissiveAsForward))
                 return;
 
             if (!hdCamera.frameSettings.IsEnabled(FrameSettingsField.OpaqueObjects))
