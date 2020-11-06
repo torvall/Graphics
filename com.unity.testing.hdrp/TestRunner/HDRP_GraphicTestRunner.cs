@@ -14,7 +14,7 @@ public class HDRP_GraphicTestRunner
 {
     [PrebuildSetup("SetupGraphicsTestCases")]
     [UseGraphicsTestCases]
-#if ENABLE_VR || ENABLE_AR
+#if ENABLE_XR_MODULE
     [Timeout(3000)] // Set timeout to 5 minutes to handle complex scenes with many shaders (default timeout is 3 minutes)
 #else 
     [Timeout(1000)] // Set timeout to 5 minutes to handle complex scenes with many shaders (default timeout is 3 minutes)
